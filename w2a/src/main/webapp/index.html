@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murach Survey Form</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<img src="https://www.southeastlinuxfest.org/wp-content/uploads/2014/06/Murach_image.jpg"
+     alt="Murach Logo" width="100">
+<h1>Survey</h1>
+<p>If you have a moment, we'd appreciate it if you would fill out this</p>
+
+<h2>Your Infomation:</h2>
+<form action="SurveyServlet" method="post">
+    <input type="hidden" name="action" value="add">
+
+    <label>First Name:</label>
+    <input type="text" name="firstName" required><br>
+
+    <label>Last Name:</label>
+    <input type="text" name="lastName" required><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" required><br>
+    <label>Date of Birth: </label>
+    <input type = "text" name = "dob" required><br>
+    <label>&nbsp;</label>
+
+    <h2>How did you hear about us?</h2>
+    <input type="radio" name="hear" id="search" value="search" checked>
+    <label for="search">Search engine</label>
+
+    <input type="radio" name="hear" id="word" value="word">
+    <label for="word">Word of mouth</label>
+
+    <input type="radio" name="hear" id="social" value="social">
+    <label for="social">Social Media</label>
+
+    <input type="radio" name="hear" id="other" value="other">
+    <label for="other">Other</label><br>
+    <h2>Would you like to receive announcements about new CDs and special offers?</h2>
+    <input type="checkbox" name="announce1" id="announce1">
+    <label for="announce1">YES, I'd like that.</label><br>
+
+    <input type="checkbox" name="announce2" id="announce2">
+    <label for="announce2">YES, please send me email announcements.</label><br><br>
+
+    <label for="contact">Please contact me by:</label>
+    <select name="contactMethod" id="contact">
+        <option value="email-postal">Email or postal mail</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit" id="submit">
+</form>
+</body>
+</html>
